@@ -1,0 +1,41 @@
+nav {
+    padding: 0 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    opacity:1;
+    background: rgb(164, 51, 74);
+    background: linear-gradient(90deg, rgba(164, 51, 74, 1) 13%, rgb(168, 26, 116) 52%, rgb(138, 43, 226) 87%);
+    height:4em;
+}
+
+nav ul {
+    display: flex;
+    width:30%;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    color:white;
+    font-weight: 700;
+    font-size:1em;
+    transition: all 0.5 ease-in-out;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav li {
+    padding: 0.5em;
+}
+
+nav li:hover {
+    cursor: pointer;
+    color: rgb(255, 79, 117);
+    font-weight: 700;
+    border: 2px solid rgb(199, 146, 252);
+    border-radius: 999em;
+}
