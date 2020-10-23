@@ -13,6 +13,7 @@ import side2 from "../images/side-bars-2.png";
 import agri from "../images/smart-agri.jpg";
 import deli from "../images/smart-delivery.jpg";
 import caseStudy1 from "../images/inventory-mgmt.png";
+import associate1 from "../images/fix-logo-hp.png";
 import caseStudy2 from "../images/item2.webp";
 
 const Home = () => {
@@ -444,7 +445,58 @@ const Home = () => {
                     <div
                         ref={(el) => (ourAssociatesList = el)}
                         className="associate-logos"
-                    ></div>
+                    >
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                        <img
+                            className="associate-logo-img"
+                            alt="hp"
+                            src={associate1}
+                        />
+                    </div>
                 </section>
                 <section className="section4">
                     <h1 className="case-study-title" ref={(el) => (line3 = el)}>
@@ -525,10 +577,8 @@ const Home = () => {
                             ref={(el) => (lastSectionLine2 = el)}
                         >
                             With the help our associate companies, there is no
-                            idea that will remain just a pipedream.
-                            <br />
-                            So hop on board and get started with your dream
-                            project!
+                            idea that will remain just a pipedream. So hop on
+                            board and get started with your dream project!
                         </h2>
                         <button
                             ref={(el) => (contactBtn = el)}
@@ -539,7 +589,24 @@ const Home = () => {
                     </div>
                 </section>
                 <footer className="footer">
-                    <p>Brand Name</p>
+                    <div className="col-footer">
+                        <p>About Us</p>
+                        <p>Careers</p>
+                        <p>Partners</p>
+                    </div>
+                    <div className="col-footer">
+                        <p>In the News</p>
+                        <p>Our Policies</p>
+                        <p>IOT Services</p>
+                    </div>
+                    <div className="col-footer">
+                        <p>Facebook</p>
+                        <p>Twitter</p>
+                        <p>LinkedIn</p>
+                    </div>
+                    <p className="copyright-logo">
+                        &#169;2020 Brand Name. All Rights Reserved.
+                    </p>
                 </footer>
             </main>
         </div>
