@@ -68,7 +68,7 @@ const Home = () => {
             .to(loader, {
                 opacity: 0,
                 ease: Power3.easeOut,
-                duration: 1,
+                duration: 1.5,
                 display: "none",
             })
             .to(initial, {
@@ -169,11 +169,11 @@ const Home = () => {
                 opacity: 0,
                 xPercent: -100,
                 scale: 0.5,
-                duration: 1,
                 scrollTrigger: {
-                    trigger: line2,
+                    trigger: line1,
                     start: "top bottom",
-                    end: "bottom center",
+                    end: "top center",
+                    scrub: 0.5,
                 },
             })
             .from(section3Initial, {
@@ -250,7 +250,6 @@ const Home = () => {
                 scrollTrigger: {
                     trigger: caseStudySlider,
                     start: "top bottom",
-                    end: "bottom 70%",
                     scrub: 0.5,
                     toggleActions: "play reset reverse reset",
                 },
@@ -258,10 +257,13 @@ const Home = () => {
             .from(section5, {
                 opacity: 0,
                 scale: 0.7,
+                background: "white",
                 scrollTrigger: {
                     trigger: section5Initial,
-                    scrub: 0.2,
-                    start: "bottom bottom",
+                    scrub: 0.5,
+                    start: "top bottom",
+                    end: "top center",
+                    toggleActions: "play reset reverse reset",
                 },
             })
             .from(lastSectionLine1, {
@@ -271,24 +273,25 @@ const Home = () => {
                 ease: Power3.easeInOut,
                 scrollTrigger: {
                     trigger: section5,
-                    start: "bottom bottom",
                     end: "top center",
                     scrub: 0.5,
                 },
             })
-            .from(lastSectionLine2, {
-                opacity: 0,
-                yPercent: 100,
-                delay: 1,
-                scale: 2,
-                ease: Power3.easeInOut,
-                scrollTrigger: {
-                    trigger: lastSectionLine1,
-                    start: "top bottom",
-                    end: "top center",
-                    scrub: 0.5,
+            .from(
+                lastSectionLine2,
+                {
+                    opacity: 0,
+                    yPercent: 100,
+                    scale: 2,
+                    ease: Power3.easeInOut,
+                    scrollTrigger: {
+                        trigger: lastSectionLine1,
+                        end: "top center",
+                        scrub: 1,
+                    },
                 },
-            })
+                "+=0.5"
+            )
             .from(contactBtn, {
                 opacity: 0,
                 yPercent: -100,
@@ -327,11 +330,11 @@ const Home = () => {
         const inner = event.target.innerHTML;
         const currentImgsOrder = caseImgs;
         const currentTitleOrder = caseTitles;
-        if (inner === "arrow_back") {
+        if (inner === "keyboard_arrow_left") {
             currentImgsOrder.push(currentImgsOrder.shift());
             currentTitleOrder.push(currentTitleOrder.shift());
         }
-        if (inner === "arrow_forward") {
+        if (inner === "keyboard_arrow_right") {
             currentImgsOrder.unshift(currentImgsOrder.pop());
             currentTitleOrder.unshift(currentTitleOrder.pop());
         }
@@ -354,9 +357,7 @@ const Home = () => {
                         <h1>Brand Name</h1>
 
                         <h2>
-                            One Stop Solution for
-                            <br />
-                            all Your
+                            One Stop Solution for all Your
                             <br />
                             <span style={{ color: "#8a2be2" }}>IOT </span>
                             Needs.
@@ -535,13 +536,13 @@ const Home = () => {
                             className="medium material-icons back-arrow"
                             onClick={handleCaseClick}
                         >
-                            arrow_back
+                            keyboard_arrow_left
                         </i>
                         <i
                             className="medium material-icons fwd-arrow"
                             onClick={handleCaseClick}
                         >
-                            arrow_forward
+                            keyboard_arrow_right
                         </i>
                     </div>
                 </section>
@@ -569,7 +570,7 @@ const Home = () => {
                             className="last-section-title"
                             ref={(el) => (lastSectionLine1 = el)}
                         >
-                            We are ready to fasttrack your ideas into <br />
+                            We are ready to fast track your ideas into <br />
                             real world projects.
                         </h1>
                         <h2
@@ -589,6 +590,7 @@ const Home = () => {
                     </div>
                 </section>
                 <footer className="footer">
+                    <h1 className="footer-brand">Brand Name</h1>
                     <div className="col-footer">
                         <p>About Us</p>
                         <p>Careers</p>

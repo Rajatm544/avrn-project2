@@ -24,7 +24,7 @@ const Navbar = () => {
                 yPercent: -10,
                 duration: 0.5,
             },
-            "+=0.2"
+            "+=0.3"
         );
         tl.from(
             item2,
@@ -33,7 +33,7 @@ const Navbar = () => {
                 yPercent: -10,
                 duration: 0.5,
             },
-            "+=0.2"
+            "+=0.3"
         );
         tl.from(
             item3,
@@ -42,7 +42,7 @@ const Navbar = () => {
                 yPercent: -10,
                 duration: 0.5,
             },
-            "+=0.2"
+            "+=0.3"
         );
     });
     return (
