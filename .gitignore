@@ -1,4 +1,4 @@
-/.gitignore
 *.log
-ngrok.exe
 node_modules
+ngrok.exe
+.gitignore
