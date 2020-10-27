@@ -312,8 +312,9 @@ const Home = () => {
         CaseStudyTl.from(caseStudyImg, {
             duration: 1.5,
             ease: Power3.easeOut,
+            background: "#1a1a1d",
             opacity: 0,
-            scale: 0.9,
+            scale: 0.8,
         }).from(
             caseStudyTitle,
             {
@@ -322,7 +323,7 @@ const Home = () => {
                 scale: 0.9,
                 opacity: 0,
             },
-            "-=0.5"
+            "-=1"
         );
     }, [caseImgs]);
 
